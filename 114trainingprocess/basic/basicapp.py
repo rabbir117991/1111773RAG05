@@ -6,7 +6,11 @@ from langchain.chains.question_answering import load_qa_chain
 from langchain.callbacks import get_openai_callback
 from langchain.chat_models import ChatOpenAI
 from opencc import OpenCC
+from app import app 
 
+app.run(
+    debug = True
+)
 # 確保環境變數中包含 OPENAI_API_KEY
 openai_api_key = os.getenv('OPENAI_API_KEY')
 if not openai_api_key:
