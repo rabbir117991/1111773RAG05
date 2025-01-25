@@ -9,7 +9,7 @@ from opencc import OpenCC
 from app import app 
 
 app.run(
-    debug = True
+    debug = False
 )
 # 確保環境變數中包含 OPENAI_API_KEY
 openai_api_key = os.getenv('OPENAI_API_KEY')
@@ -54,4 +54,4 @@ def get_response():
         return jsonify({'error': str(e)})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
